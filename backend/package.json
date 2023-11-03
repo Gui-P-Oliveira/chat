@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint 'src/**/*.js' --fix",
+    "format": "prettier-eslint 'server/**/*.{js,json}' --write"
   },
   "keywords": [],
   "author": "",
@@ -13,9 +15,14 @@
     "@types/node": "^20.8.10",
     "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier-eslint-cli": "^8.0.1",
     "prisma": "^5.5.2",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.5.2"
   }
 }
